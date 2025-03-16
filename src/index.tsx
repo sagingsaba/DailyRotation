@@ -1,22 +1,16 @@
-//homepage
-
+import { useNavigate } from "react-router-dom";
 import DateToday from "./script/datetoday";
-const goToMainPage = () => {
-  window.location.href = "/src/pages/mainpage.html"; 
-};
 
 function Index() {
-  return (
+  const navigate = useNavigate();
 
-<body>
-  <div>Daily Rotation</div>
-  <div><DateToday/></div>
-  <button onClick={goToMainPage}>
-    Get Started
-  </button>
-  
-</body>
-  )
+  return (
+    <div>
+      <h1>Daily Rotation</h1>
+      <DateToday />
+      <button onClick={() => navigate("/mainpage")}>Get Started</button>
+    </div>
+  );
 }
 
 export default Index;
