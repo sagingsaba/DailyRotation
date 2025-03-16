@@ -6,8 +6,10 @@ function Index() {
 
   return (
     <div>
-      <h1>Daily Rotation</h1>
       <DateToday />
+      <img></img>
+      <h1>Daily Rotation</h1>
+      <p>Time to serve your sentence in the prison</p>
       <button onClick={() => navigate("/mainpage")}>Get Started</button>
     </div>
   );
